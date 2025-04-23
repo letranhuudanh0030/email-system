@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email System Dashboard</title>
+    <style>
+        .dashboard { display: flex; gap: 20px; margin: 20px; }
+        .card { padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .progress { height: 20px; background: #eee; }
+        .progress-bar { height: 100%; background: #4CAF50; transition: width 0.3s; }
+    </style>
+</head>
+<body>
+    <h1>Email Marketing System</h1>
+
+    <div>
+        <input type="file" id="csvFile" accept=".csv">
+        <button onclick="uploadCSV()">Upload CSV</button>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Queue Status</h3>
+            <div id="queueLength">0</div>
+            <div class="progress">
+                <div class="progress-bar" id="queueProgress"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Statistics</h3>
+            <div>Sent: <span id="sentCount">0</span></div>
+            <div>Failed: <span id="failedCount">0</span></div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
